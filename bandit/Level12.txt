@@ -1,0 +1,7 @@
+# El paso princilap es moverlo de .txt a .hexdump
+# El 2do, usando xxd -r <name>.hexdump > <name>.bin
+# Y por ultimo, usando el file, ver en que archivo comprimido seria 
+# gzip compressed data, was "data2.bin"
+# De ahi en adelante, es continuar usando gzip,bzip2,tar para descomprimir el archivo
+# Dato adicional, tenes que cambiar la extension .bin o si no tiene, a la extension gz,bz2,tar para descomprimir
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn

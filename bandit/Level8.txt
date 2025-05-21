@@ -1,0 +1,3 @@
+sort data.txt | uniq -u
+#Con el Sort los organize y con el uniq -u me devuelve los que son unicos
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM

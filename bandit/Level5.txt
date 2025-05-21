@@ -1,0 +1,19 @@
+cd inhere
+# Tengo varias formas de buscarlo ya que hay muchos archivos y carpetas
+# Tiene que ser $HUMAN-READABLE - $1033 bytes - $NOT EXECUTABLE (1 - en octal)
+
+# find <path> <tipo file> <tamaño> <permisos>
+# path -> directorio actual y subdirectorios
+# perm -> se fija permisos siendo 1 executable
+find . -type f -size 1033c ! -perm /111
+
+# La parte de -exec es ejecutar el comando file que usa el resultado de la busqueda anterior para ver que tipo de archivo es
+# En este caso particular, los text HUMAN-READABLE da ASCII text. Entonces el resultado es el siguiente
+# ./inhere/maybehere07/.file2: ASCII text, with very long lines (1000)
+find . -type f -size 1033c ! -perm /111  -exec file {} \;
+# a su vez se le puedo agregar el comando grep 'ASCII text' para filtrar por si retorna otro tipo de archivo
+
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+
+

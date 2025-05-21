@@ -1,0 +1,8 @@
+# Tuve que hacer unas triquiñuelas porque es por todo el SV que esta la pass
+# el 2>&1: redirige errores (stderr) a salida normal (stdout)
+# con el grep filtro la salida del find para que no me muestre la salida de "find" ya que no tengo acceso con eso
+# el grep ultimo es para marcarlo en rojo
+find . -user bandit7 -group bandit6 -size 33c 2>&1 | grep -v 'find' | grep '.'
+./var/lib/dpkg/info/bandit7.password
+
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj

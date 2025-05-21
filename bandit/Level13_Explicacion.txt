@@ -1,0 +1,9 @@
+# En esta nivel se usa SSH
+# El problema, es que no tengo contraseña para leer, tengo que usar una clave privada que me dan ellos.
+# Puedo hacer 2 cosas, usar la clave privada que esta en bandit13 o copiarla localmente y usarla
+# A su vez, la clave solo tiene que ser leida por un unico usuario
+chmod 600 ./Level13.txt
+ssh -i ./Level13.txt  bandit13@bandit.labs.overthewire.org -p 2220
+
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
