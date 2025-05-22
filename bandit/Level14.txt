@@ -1,0 +1,4 @@
+# Tenia que hacer una conexion al puerto 30000 con nc en local
+cat /etc/bandit_pass/bandit14 | nc localhost 30000
+Correct!
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
