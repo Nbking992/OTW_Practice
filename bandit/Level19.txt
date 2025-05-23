@@ -1,0 +1,8 @@
+# En este nivel, tengo que ejecutar el archivo que tengo en el home
+# Basciamente hace que ejecute codigo como si fuera otra persona
+./bandit20-do 
+Run a command as another user.
+  Example: ./bandit20-do id
+# De esta manera puedo sacar la clave
+./bandit20-do cat /etc/bandit_pass/bandit20
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO

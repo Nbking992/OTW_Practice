@@ -1,0 +1,17 @@
+# En este nivel es rebuscado, porque tendria que usar multiples conexiones
+# O usar "multiples pantallas" algo asi
+# La cosa, seria que intente crear un daemon con nc que escuche en un puerto en particular
+# A su vez, que ese puerto devuelva con echo la password del nivel 20
+echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -l -p 4444
+
+# De esta manera queda esperando una conexion.
+# y con el executable que tengo, se fija que pass usa y se la envia al daemon.
+./suconnect 4444
+Read: 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+Password matches, sending next password
+
+# Entonces en la parte del daemon, veo esto
+echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -l -p 4444
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+
+# Por ende, el executable se fija que la pass sea la misma y hace un echo al puerto con la contraseña.

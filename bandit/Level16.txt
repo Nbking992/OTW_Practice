@@ -1,0 +1,13 @@
+# Para este paso, tenia que leer el manual de openssl-s_client
+man openssl-s_client
+# De ahi, buscar la parte de /CONNECTED COMMANDS
+# No me di cuenta, pero si hago al conexion, sin el -quiet no espera comandos
+# Como la clave del 15 empieza con k, siendo la K el "keyupdate" termina sin darme la clave.
+# Como dato adicional, buscar los puertos con nmap es buena idea. Pero no siempre los voy a tener
+ss -tlnp | grep ':3[1-2]'
+# De esta manera, busco los puestos que estan LISTENING y  que sean TCP 
+# Con el grep solo filtro la informacion nada mas
+openssl s_client -quiet -connect localhost:31790
+# Tuve que loguearme con la clave RSA y buscar la pass en /etc/bandit_pass/bandit17
+EReVavePLFHtFlFsjn3hyzMlvSuSAcRD
+ 

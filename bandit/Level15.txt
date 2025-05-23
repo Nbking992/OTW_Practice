@@ -1,0 +1,4 @@
+# Tenia que hacer una conexion segura usando openssl s_client
+openssl s_client localhost:30001
+
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx

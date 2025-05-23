@@ -1,0 +1,3 @@
+# Diferencias entre 2 archivos.
+diff passwords.new passwords.old -y | grep '|'
+x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO			      |	C6XNBdYOkgt5ARXESMKWWOUwBeaIQZ0Y

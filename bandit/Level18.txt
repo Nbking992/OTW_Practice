@@ -1,0 +1,18 @@
+# Algo loco de este nivel, es que aprendes los pasos de una conexion ssh
+# 1. Establece la conexión con el servidor.
+# 2. Autentica tu usuario (contraseña o llave).
+# 3. Inicia una shell interactiva de login (como bash).
+# 4. Al iniciar esa shell, se ejecutan varios archivos de configuración, entre ellos:
+# 	.bash_profile
+# 	.bash_login
+# 	.profile
+# 	.bashrc ← en este caso, el culpable
+
+# Entonces, se puede ejecutar un comando ANTES de que haga la shell interactiva
+# Como se que es un file en el home, puedo usar cat readme y listo
+# Para mas precision, puedo usar "bash --norc" para que no ejecute el bashrc y poder quedarme en una pseudo shell interactiva
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+ssh bandit18@bandit.labs.overthewire.org -p 2220 "bash --norc"
+
+cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
