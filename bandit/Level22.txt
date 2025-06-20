@@ -1,0 +1,17 @@
+# Este es similar al anterior, PERO lo que cambia es que tenes que ejecutar el comando para saber DONDE lo guarda
+
+cat /usr/bin/cronjob_bandit23.sh
+#!/bin/bash
+
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+
+# bandit22@bandit:/etc/cron.d$ echo I am user $(whoami) | md5sum | cut -d ' ' -f 1
+8169b67bd894ddbb4412f91573b38db3
+
+# bandit22@bandit:/etc/cron.d$  cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga

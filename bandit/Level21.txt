@@ -1,0 +1,10 @@
+# Primero me dice que busque en la carpeta de cron que es /etc/cron.d
+# Eso me dice DONDE esta el script que ejecuta cron
+cat cronjob_bandit22.sh
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+# Por lo que veo, me lo deja en una carpeta en temp
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
