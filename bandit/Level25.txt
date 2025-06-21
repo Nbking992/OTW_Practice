@@ -1,0 +1,16 @@
+# Por lo que veo, en este nivel no sirve conectarse de manera normal
+
+#bandit25@bandit:/usr/bin$ getent passwd bandit26
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+#bandit25@bandit:/usr/bin$ ls -lh ./showtext
+-rwxr-xr-x 1 root root 58 Apr 10 14:23 ./showtext
+#bandit25@bandit:/usr/bin$ cat ./showtext
+#!/bin/sh
+
+export TERM=linux
+
+exec more ~/text.txt
+exit 0
+
+# Me ejecuta el comando y no me da una shell. Entonces necesito poder tener un pinshe shell o bash para ejecutar codigo
+
